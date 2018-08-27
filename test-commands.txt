@@ -1,0 +1,13 @@
+npx aws-api-gateway-cli-test --username admin@example.com --password Passw0rd! --user-pool-id us-west-2_6hRvXOPbg --app-client-id rp38pvocgh8fps4nbhea49p3c --cognito-region us-west-2 --identity-pool-id us-west-2:cfb91fe5-14a6-4509-953b-6951ba5468c3 --invoke-url https://4bea6tavcl.execute-api.us-west-2.amazonaws.com/prod/ --api-gateway-region us-west-2 --path-template notes --method POST --body "{\"content\":\"hello world\",\"attachment\":\"hello.jpg\"}"
+
+arn:aws:execute-api:us-west-2:*:4bea6tavcl/*
+
+{
+    "Effect": "Allow",
+    "Action": [
+    "execute-api:Invoke"
+    ],
+    "Resource": [
+    "arn:aws:execute-api:us-west-2:*:4bea6tavcl/*"
+    ]
+}
